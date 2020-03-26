@@ -15,3 +15,14 @@ body {
     margin: auto;
     padding: 0 20px;
 }
+.btn {
+    position: relative;
+    display: inline-block;
+    background-color: #bc61c6;
+    padding: 15px 20px;
+    color: #fff;
+    &:after,
+    &:before {
+        background: darken(#bc61c6, 10%);
+    }
+}

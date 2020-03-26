@@ -9,6 +9,7 @@
 		<meta content="pt-br" http-equiv="content-language">
 		<link rel="stylesheet" href="https://use.typekit.net/cbw5bcl.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/lib/hamburgers.min.css">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/lib/hover.min.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.min.css">
 		<?php wp_head(); ?> 
 	</head>
@@ -33,10 +34,8 @@
 				<li><a href="#">Products</a></li>
 				<li><a href="#">About Us</a></li>
 				<li><a href="#">Contact</a></li>
-				<li><a href="#" class="btn">Where to buy</a></li>
+				<li><a href="#" class="btn hvr-shutter-out-horizontal">Where to buy</a></li>
 			</ul>
 		</nav>
 	</div>
 </header>
-
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis hic iusto quae veritatis dicta quas molestiae labore repellendus, quod a velit optio, eius magni similique, consequuntur aliquid dolore corporis soluta!
