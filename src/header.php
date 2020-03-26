@@ -14,5 +14,26 @@
 
 	<body>
 <header>
-	
+	<div class="container">
+		<div class="headerLogo">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/header-logo.png" alt="We Get It Logo">
+		</div>
+		<div class="hamburgerWrapper">
+			<div class="hamburger hamburger--squeeze">
+				<div class="hamburger-box">
+				<div class="hamburger-inner"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menuMobile">
+		<nav>
+			<ul>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#" class="btn">Where to buy</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>
