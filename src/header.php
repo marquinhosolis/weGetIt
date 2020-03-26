@@ -27,6 +27,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="menuDesktop">
+			<nav>
+				<ul>
+					<li><a href="#" class="hvr-grow">Products</a></li>
+					<li><a href="#" class="hvr-grow">About Us</a></li>
+					<li><a href="#" class="hvr-grow">Contact</a></li>
+					<li><a href="#" class="btn hvr-shutter-out-horizontal">Where to buy</a></li>
+				</ul>
+			</nav>
+		</div>
 	</div>
 	<div class="menuMobile">
 		<nav>
