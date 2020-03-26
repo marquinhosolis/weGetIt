@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/style.scss",
+        "../scss/_pages/_pages.scss",
+        "../scss/_pages/_page-404.scss",
+        "../scss/_pages/_page-home.scss",
+        "../scss/_pages/_page-blog.scss",
+        "../scss/_pages/_single-post.scss",
+        "../scss/_pages/_page-contact.scss",
+        "../scss/_global.scss",
+        "../scss/_components/_components.scss",
+        "../scss/_components/_header.scss",
+        "../scss/_components/_menu.scss",
+        "../scss/_components/_footer.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}
