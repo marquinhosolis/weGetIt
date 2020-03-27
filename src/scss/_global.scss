@@ -32,3 +32,26 @@ img {
         background: darken(#bc61c6, 10%);
     }
 }
+
+.title {
+    color: #00335a;
+    text-align: center;
+    h3 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        font-family: upgrade, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        @media (min-width: 768px) {
+            font-size: 40px;
+        }
+    }
+    &:after {
+        display: block;
+        content: "";
+        background-color: #ff61b6;
+        height: 2px;
+        width: 300px;
+        margin: auto;
+    }
+}
