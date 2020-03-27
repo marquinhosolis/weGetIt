@@ -150,8 +150,6 @@
             max-width: 260px;
             margin: auto;
             margin-bottom: 50px;
-            img {
-            }
             .whyHomeReasonText {
                 h4 {
                     margin-bottom: 0;
@@ -209,5 +207,20 @@
             margin: 0;
             align-self: flex-end;
         }
+    }
+}
+
+.blogsHome {
+    padding: 50px 0;
+    text-align: center;
+    .blogsHomeTitle {
+        width: 100%;
+    }
+    article {
+        text-align: left;
+    }
+    .btn {
+        margin: auto;
+        margin-top: 50px;
     }
 }

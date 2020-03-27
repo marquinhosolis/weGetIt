@@ -89,5 +89,52 @@ Template Name: Home Page
 				<img class="whereToBuyHomeImage" src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/where-to-buy-image.png" alt="WeGetIt">
 			</div>
 		</section>
+		<section class="blogs blogsHome">
+			<div class="container">
+				<div class="blogsHomeTitle title">
+					<h3>Recent Blogs</h3>
+				</div>
+				<article class="hvr-float">
+					<a href="#">
+						<div class="blogImage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/blog-image.png); ">
+							<div class="content"></div>
+						</div>
+						<div class="blogText">
+							<div class="blogDate">Feb. 26, 2019</div>
+							<div class="blogTitle"><h4>Lorem Ipsum</h4></div>
+							<div class="blogIntro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+							<div class="blogReadMore">Read more</div>
+						</div>
+					</a>
+				</article>
+				<article class="hvr-float">
+					<a href="#">
+						<div class="blogImage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/blog-image.png); ">
+							<div class="content"></div>
+						</div>
+						<div class="blogText">
+							<div class="blogDate">Feb. 26, 2019</div>
+							<div class="blogTitle"><h4>Lorem Ipsum</h4></div>
+							<div class="blogIntro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+							<div class="blogReadMore">Read more</div>
+						</div>
+					</a>
+				</article>
+				<article class="hvr-float">
+					<a href="#">
+						<div class="blogImage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/blog-image.png); ">
+							<div class="content"></div>
+						</div>
+						<div class="blogText">
+							<div class="blogDate">Feb. 26, 2019</div>
+							<div class="blogTitle"><h4>Lorem Ipsum</h4></div>
+							<div class="blogIntro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+							<div class="blogReadMore">Read more</div>
+						</div>
+					</a>
+				</article>
+				<a href="#" class="btn hvr-shutter-out-horizontal">View all blogs</a>
+			</div>
+		</section>
 	</main>
 <?php get_footer(); ?>		
