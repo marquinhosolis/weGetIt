@@ -11,6 +11,10 @@ body {
     font-size: 18px;
 }
 
+.body--locked {
+    overflow: hidden !important;
+}
+
 .container {
     max-width: 1200px;
     margin: auto;

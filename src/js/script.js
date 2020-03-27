@@ -33,6 +33,7 @@ $(document).ready(function() {
     function menuActive() {
         $(".hamburger").click(function() {
             $(".menuMobile").toggleClass("menuMobile--active");
+            $("body").toggleClass("body--locked");
         });
     }
 
