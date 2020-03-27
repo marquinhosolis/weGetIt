@@ -28,5 +28,24 @@ Template Name: Home Page
 				</div>
 			</div>
 		</section>
+		<section class="productsHome">
+			<div class="container">
+				<div class="productsHomeTitle title">
+					<h3>Explore our products</h3>
+				</div>
+				<div class="productsHomeCategories">
+					<div class="productsHomeCategory" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/category1.png)">
+						<div class="content">
+							<a href="#" class="btn hvr-shutter-out-horizontal">category name</a>
+						</div>
+					</div>
+					<div class="productsHomeCategory" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/category2.png)">
+						<div class="content">
+							<a href="#" class="btn hvr-shutter-out-horizontal">category name</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 <?php get_footer(); ?>		
