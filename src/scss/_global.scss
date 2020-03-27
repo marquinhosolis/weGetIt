@@ -53,11 +53,14 @@ img {
         height: 2px;
         width: 300px;
         margin: auto;
+        margin-bottom: 30px;
     }
 }
 
 @mixin ratio($width, $height) {
     position: relative;
+    background-size: cover;
+    background-position: center center;
     &:before {
         display: block;
         content: "";
