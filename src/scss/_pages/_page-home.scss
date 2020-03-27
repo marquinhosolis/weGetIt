@@ -224,3 +224,29 @@
         margin-top: 50px;
     }
 }
+
+.homeCta {
+    padding: 50px 0;
+    background: url(../images/home-cta-bg.png) no-repeat bottom left #ededed;
+    text-align: center;
+    .container {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    h3 {
+        margin: 10px;
+        color: #00335a;
+        font-family: upgrade, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        @media (min-width: 768px) {
+            font-size: 30px;
+        }
+    }
+    .btn {
+        margin: 10px;
+    }
+}

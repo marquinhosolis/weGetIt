@@ -136,5 +136,11 @@ Template Name: Home Page
 				<a href="#" class="btn hvr-shutter-out-horizontal">View all blogs</a>
 			</div>
 		</section>
+		<section class="homeCta">
+			<div class="container">
+				<h3>Have a question, comment or suggestion?</h3>
+				<a href="#" class="btn hvr-shutter-out-horizontal">Contact us now</a>
+			</div>
+		</section>
 	</main>
 <?php get_footer(); ?>		
