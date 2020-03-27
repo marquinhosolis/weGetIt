@@ -49,7 +49,7 @@ Template Name: Home Page
 		</section>
 		<section class="whyHome">
 			<div class="container">
-				<div class="productsHomeTitle title">
+				<div class="whyHomeTitle title">
 					<h3>Why WeGetIt</h3>
 				</div>
 				<div class="whyHomeReasons">
