@@ -83,3 +83,76 @@ img {
         bottom: 0;
     }
 }
+
+.blogs {
+    .container {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    article {
+        background-color: #ededed;
+        margin: 10px 5px;
+        a {
+            text-decoration: none;
+        }
+        .blogImage {
+            @include ratio(380, 185);
+        }
+        .blogText {
+            padding: 20px 15px;
+            .blogDate,
+            .blogTitle,
+            .blogIntro,
+            .blogReadMore {
+                padding: 0 15px;
+                color: #00335a;
+                margin-bottom: 10px;
+            }
+            .blogDate {
+                font-family: upgrade-lights, sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                @media (min-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+            .blogTitle {
+                font-family: upgrade, sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                h4 {
+                    margin: 0;
+                }
+                @media (min-width: 768px) {
+                    font-size: 24px;
+                }
+            }
+            .blogIntro {
+                border-left: solid 2px #ff61b6;
+                font-family: upgrade-lights, sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                @media (min-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+            .blogReadMore {
+                font-family: upgrade, sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                font-style: italic;
+                @media (min-width: 768px) {
+                    font-size: 16px;
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            width: calc(33% - 10px);
+        }
+    }
+}
