@@ -66,3 +66,43 @@
         padding-top: 50px;
     }
 }
+
+.aboutHome {
+    padding: 50px 0;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutHomeDrops {
+        margin-bottom: 20px;
+        @media (min-width: 768px) {
+            width: 40%;
+            margin: 0 20px;
+        }
+    }
+    .aboutHomeText {
+        h3 {
+            margin: 0;
+            margin-bottom: 0px;
+            color: #00335a;
+            font-size: 36px;
+            font-family: upgrade, sans-serif;
+            font-weight: 700;
+            span {
+                display: block;
+                font-family: upgrade, sans-serif;
+                font-size: 30px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+        @media (min-width: 768px) {
+            width: 40%;
+            margin: 0 20px;
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 80px 0;
+    }
+}

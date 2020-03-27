@@ -17,5 +17,16 @@ Template Name: Home Page
 				</div>
 			</div>
 		</section>
+		<section class="aboutHome">
+			<div class="container">
+				<div class="aboutHomeDrops">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/drops.png" alt="">
+				</div>
+				<div class="aboutHomeText">
+					<h3>Life is for living, <span>not cleaning.</span></h3>
+					<p>Get all of your household jobs done quickly, effectively and affordably with the WeGetIt family of products.</p>
+				</div>
+			</div>
+		</section>
 	</main>
 <?php get_footer(); ?>		
