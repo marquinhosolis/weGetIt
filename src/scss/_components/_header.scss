@@ -7,4 +7,10 @@ header {
         align-items: center;
         justify-content: space-between;
     }
+    .headerLogo {
+        max-width: 55px;
+        @media (min-width: 768px) {
+            max-width: 100%;
+        }
+    }
 }
