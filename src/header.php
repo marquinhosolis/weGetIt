@@ -18,9 +18,7 @@
 <header>
 	<div class="container">
 		<div class="headerLogo">
-			<a href="<?php echo site_url(); ?>">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/header-logo.png" alt="We Get It Logo">
-			</a>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/header-logo.png" alt="We Get It Logo">
 		</div>
 		<div class="hamburgerWrapper">
 			<div class="hamburger hamburger--squeeze">
