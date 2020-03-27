@@ -1,0 +1,68 @@
+.coverHome {
+    padding: 90px 0;
+    padding-bottom: 0;
+    background: url(../images/wp/home-cover-bg.png) #1d2630 center center;
+    background-size: cover;
+    .container {
+        padding: 0;
+        @media (min-width: 768px) {
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .coverHomeText {
+        padding: 15px 25px;
+        margin-left: 30px;
+        background-color: #65d1ff;
+        color: #fff;
+        h1,
+        h2 {
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-family: upgrade, sans-serif;
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        h2 {
+            max-width: 250px;
+            font-family: upgrade-lights, sans-serif;
+            font-size: 26px;
+            font-weight: 500;
+            text-transform: uppercase;
+            @media (min-width: 768px) {
+                max-width: 100%;
+                margin-right: 60px;
+            }
+        }
+        @media (min-width: 768px) {
+            position: relative;
+            right: -30px;
+            width: 60%;
+        }
+        @media (min-width: 1024px) {
+            padding: 30px;
+        }
+    }
+    .coverHomeProducts {
+        position: relative;
+        bottom: -30px;
+        max-width: 80%;
+        margin: auto;
+        @media (min-width: 768px) {
+            width: 50%;
+            max-width: 100%;
+            left: -50px;
+        }
+    }
+    @media (min-width: 768px) {
+        padding-top: 30px;
+    }
+    @media (min-width: 1024px) {
+        padding-top: 50px;
+    }
+}
