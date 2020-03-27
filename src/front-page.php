@@ -78,5 +78,16 @@ Template Name: Home Page
 				<a href="#" class="btn hvr-shutter-out-horizontal">LEARN MORE ABOUT US</a>
 			</div>
 		</section>
+		<section class="whereToBuyHome">
+			<div class="container">
+				<div class="whereToBuyHomeText">
+					<div class="whereToBuyHomeTitle title">
+						<h3>Looking for where you can buy our products?</h3>
+					</div>
+					<a href="#" class="btn hvr-shutter-out-horizontal">where to buy</a>
+				</div>
+				<img class="whereToBuyHomeImage" src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/where-to-buy-image.png" alt="WeGetIt">
+			</div>
+		</section>
 	</main>
 <?php get_footer(); ?>		
