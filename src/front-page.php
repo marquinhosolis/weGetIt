@@ -13,14 +13,14 @@ Template Name: Home Page
 					<h2>without the premium price tag</h2>
 				</div>
 				<div class="coverHomeProducts">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/home-cover-products.png" alt="">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/home-cover-products.png" alt="we get it packshot">
 				</div>
 			</div>
 		</section>
 		<section class="aboutHome">
 			<div class="container">
 				<div class="aboutHomeDrops">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/drops.png" alt="">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/drops.png" alt="drops">
 				</div>
 				<div class="aboutHomeText">
 					<h3>Life is for living, <span>not cleaning.</span></h3>
@@ -45,6 +45,37 @@ Template Name: Home Page
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+		<section class="whyHome">
+			<div class="container">
+				<div class="productsHomeTitle title">
+					<h3>Why WeGetIt</h3>
+				</div>
+				<div class="whyHomeReasons">
+					<div class="whyHomeReason">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue-drop.png" alt="drop">
+						<div class="whyHomeReasonText">
+							<h4>Big Cleaning, Small Price Tag</h4>
+							<p>Great performance shouldn’t cost the earth! Every WeGetIt product is designed to give you the best results without breaking the bank</p>
+						</div>
+					</div>
+					<div class="whyHomeReason">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pink-drop.png" alt="drop">
+						<div class="whyHomeReasonText">
+							<h4>Make your Life easier</h4>
+							<p>Spend less time cleaning and more time living! Our multi-tasking products work hard so you don’t have to.</p>
+						</div>
+					</div>
+					<div class="whyHomeReason">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/purple-drop.png" alt="drop">
+						<div class="whyHomeReasonText">
+							<h4>No Jargon here</h4>
+							<p>We’ve ditched the complicated product names and cleaned up the confusing instructions—so you know at a glance what you’re buying and how to use it.</p>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn hvr-shutter-out-horizontal">LEARN MORE ABOUT US</a>
 			</div>
 		</section>
 	</main>
