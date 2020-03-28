@@ -6,7 +6,7 @@ Template Name: About Us Page
 
 <?php get_header(); ?>
 <main class="contactPage">
-    <section class="aboutUsCover">
+    <section class="aboutUsCover" style="background-image: url('<?php the_field('cover_background_image'); ?>')">
         <div class="container">
             <h1 data-aos="fade-up">About WeGetIt</h1>
         </div>
@@ -15,12 +15,11 @@ Template Name: About Us Page
         <div class="container">
             <div class="aboutUsIntroImage" data-aos="fade-right">
                 <img class="aboutUsIntroImageDrops" src="<?php echo get_stylesheet_directory_uri(); ?>/images/drops-about.png" alt="About us Intro Image">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/about-intro-image.png" alt="About us Intro Image">
+                <img src="<?php the_field('section_1_image'); ?>" alt="About us Intro Image">
             </div>
             <div class="aboutUsIntroText" data-aos="fade-left">
-                <h2>Make every day shine<br><span>with WeGetIt</span></h2>
-                <p>Designed to fit your family’s busy day to day life, our mission is to create quality, affordable cleaning products that simply work. <br><br>With Urca, you can check off all your cleaning and laundry tasks quickly. All that’s left is for you to enjoy spending time together with family in your beautifully clean home!
-                </p>
+                <h2><?php the_field('section_1_title'); ?><br><span><?php the_field('section_1_subtitle'); ?></span></h2>
+                <?php the_field('section_1_copy'); ?>
             </div>
         </div>
     </section>
@@ -28,11 +27,11 @@ Template Name: About Us Page
         <div class="container">
             <div class="aboutUsSection2Image" data-aos="fade-left">
                 <img class="aboutUsIntroImageDrops" src="<?php echo get_stylesheet_directory_uri(); ?>/images/drops-about.png" alt="About us Intro Image">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/about-us-section2-image.png" alt="About us Intro Image">
+                <img src="<?php the_field('section_2_image'); ?>" alt="About us Intro Image">
             </div>
             <div class="aboutUsSection2Text" data-aos="fade-right">
-                <h2>WeGetIt first began in Brazil <span>over 40 years ago, </span></h2>
-                <p>winning the loyalty of families nationwide with our traditional coconut soap. Since then, we’ve expanded to other countries in South America and the United States, and our range of products has grown to include all purpose cleaners, laundry detergents, fabric softeners, and more.</p>
+                <h2><?php the_field('section_2_title'); ?><br><span><?php the_field('section_2_subtitle'); ?></span></h2>
+                <?php the_field('section_2_copy'); ?>
             </div>
         </div>
     </section>
@@ -40,30 +39,21 @@ Template Name: About Us Page
         <div class="container" data-aos="fade-up">
             <div class="flexslider dropsSlider">
                 <ul class="slides">
-                    <li >
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/purple-drop.png" alt="drop" >
-                        <h3>Trusted by families for over 40 years</h3>
-                    </li>
-                    <li>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue-drop.png" alt="drop">
-                        <h3>Powerful cleaning for every room</h3>
-                    </li>
-                    <li>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pink-drop.png" alt="drop">
-                        <h3>Family-friendly ingredients</h3>
-                    </li>
-                    <li>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue-drop.png" alt="drop">
-                        <h3>Naturally inspired fragrances</h3>
-                    </li>
-                    <li>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pink-drop.png" alt="drop">
-                        <h3>Outstanding performance</h3>
-                    </li>
-                    <li>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/purple-drop.png" alt="drop">
-                        <h3>Great value for money</h3>
-                    </li>
+
+                    <?php
+						if( have_rows('drops_section') ):
+							while ( have_rows('drops_section') ) : the_row(); 
+								$dropColor = get_sub_field('drop_color');
+								$title = get_sub_field('drop_title');
+                            ?>
+                                <li >
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $dropColor; ?>-drop.png" alt="drop">
+                                    <h3><?php echo $title; ?></h3>
+                                </li>
+							<?php
+							endwhile;
+						endif;
+					?>
                 </ul>
             </div>
         </div>
