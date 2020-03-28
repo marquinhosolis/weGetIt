@@ -68,5 +68,11 @@ Template Name: About Us Page
             </div>
         </div>
     </section>
+    <section class="homeCta">
+        <div class="container" data-aos="fade-up">
+            <h3>Have a question, comment or suggestion?</h3>
+            <a href="<?php echo site_url('/contact-us/')?>" class="btn hvr-shutter-out-horizontal">Contact us now</a>
+        </div>
+    </section>
 </main>	
 <?php get_footer(); ?>
