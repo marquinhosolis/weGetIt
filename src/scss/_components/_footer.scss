@@ -1,0 +1,75 @@
+footer {
+    padding: 50px 0;
+    background-color: #1d2630;
+    text-align: center;
+    color: #fff;
+    .container {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+    .footerLogo {
+        margin-bottom: 50px;
+        @media (min-width: 768px) {
+            margin: 0;
+        }
+    }
+    .footerAddress {
+        margin-bottom: 30px;
+        address {
+            margin-bottom: 25px;
+            a {
+                transition: all linear 0.2s;
+                color: #fff;
+                text-decoration: none;
+                font-family: upgrade, sans-serif;
+                font-style: normal;
+                font-size: 16px;
+                font-weight: 500;
+                &:hover {
+                    color: #ff61b6;
+                }
+                @media (min-width: 768px) {
+                    font-size: 24px;
+                }
+            }
+        }
+        .socialFooter {
+            a {
+                display: inline-block;
+                transition: all linear 0.2s;
+                color: #65d1ff;
+                font-size: 20px;
+                margin: 0 3px;
+                &:hover {
+                    color: #ff61b6;
+                }
+                @media (min-width: 768px) {
+                    font-size: 24px;
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            margin: 0;
+        }
+    }
+    .footerNewsletter {
+        margin-bottom: 40px;
+        @media (min-width: 768px) {
+            margin: 0;
+        }
+    }
+    .footerDppaLogo {
+        width: 100%;
+        @media (min-width: 768px) {
+            margin-top: 20px;
+            text-align: right;
+        }
+    }
+    @media (min-width: 768px) {
+        text-align: left;
+    }
+}
