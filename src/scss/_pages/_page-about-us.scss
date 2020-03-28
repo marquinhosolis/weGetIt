@@ -70,3 +70,61 @@
         padding: 100px;
     }
 }
+
+.aboutUsSection2 {
+    background-color: #ececec;
+    padding: 50px 0;
+    .container {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+    }
+    .aboutUsSection2Image {
+        position: relative;
+        left: -20px;
+        .aboutUsIntroImageDrops {
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            @media (max-width: 767px) {
+                left: 0;
+                max-width: 100px;
+                transform: translate(50%, -50%);
+            }
+            @media (min-width: 768px) {
+                right: 0;
+                max-width: 40%;
+                transform: translate(50%, -50%);
+            }
+        }
+        @media (min-width: 768px) {
+            width: 48%;
+            left: 0;
+        }
+    }
+    .aboutUsSection2Text {
+        h2 {
+            color: #223458;
+            font-family: upgrade, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            span {
+                display: block;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            @media (min-width: 768px) {
+                font-size: 36px;
+            }
+        }
+        @media (min-width: 768px) {
+            width: 48%;
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 100px;
+    }
+}
