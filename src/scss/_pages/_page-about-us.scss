@@ -1,0 +1,72 @@
+.aboutUsCover {
+    position: relative;
+    z-index: 1;
+    background: url(../images/about-page-cover-bg.png) #1d2630 center center;
+    background-size: cover;
+    padding: 50px 0;
+    text-align: center;
+    h1 {
+        color: #ffffff;
+        font-family: upgrade, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        @media (min-width: 1024px) {
+            font-size: 70px;
+        }
+    }
+}
+
+.aboutUsIntro {
+    padding: 50px 0;
+    .container {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .aboutUsIntroImage {
+        position: relative;
+        left: -20px;
+        .aboutUsIntroImageDrops {
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            @media (max-width: 767px) {
+                right: 0;
+                max-width: 100px;
+                transform: translate(50%, -50%);
+            }
+            @media (min-width: 768px) {
+                left: 0;
+                max-width: 40%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        @media (min-width: 768px) {
+            width: 48%;
+            left: 0;
+        }
+    }
+    .aboutUsIntroText {
+        h2 {
+            color: #223458;
+            font-family: upgrade, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            span {
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            @media (min-width: 768px) {
+                font-size: 36px;
+            }
+        }
+        @media (min-width: 768px) {
+            width: 48%;
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 100px;
+    }
+}
