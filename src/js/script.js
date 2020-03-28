@@ -36,7 +36,19 @@ function menuActive() {
     });
 }
 
+function slider() {
+    if ($(window).width() > 767) {
+        $(".dropsSlider").removeClass("flexslider");
+    } else {
+        $(".aboutUsDrops .flexslider").flexslider({
+            animation: "slide",
+            controlNav: false
+        });
+    }
+}
+
 $(document).ready(function() {
     menuActive();
     AOS.init();
+    slider();
 });

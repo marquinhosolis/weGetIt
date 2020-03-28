@@ -36,5 +36,37 @@ Template Name: About Us Page
             </div>
         </div>
     </section>
+    <section class="aboutUsDrops">
+        <div class="container">
+            <div class="flexslider dropsSlider">
+                <ul class="slides">
+                    <li>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/purple-drop.png" alt="drop">
+                        <h3>Trusted by families for over 40 years</h3>
+                    </li>
+                    <li>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue-drop.png" alt="drop">
+                        <h3>Powerful cleaning for every room</h3>
+                    </li>
+                    <li>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pink-drop.png" alt="drop">
+                        <h3>Family-friendly ingredients</h3>
+                    </li>
+                    <li>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue-drop.png" alt="drop">
+                        <h3>Naturally inspired fragrances</h3>
+                    </li>
+                    <li>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pink-drop.png" alt="drop">
+                        <h3>Outstanding performance</h3>
+                    </li>
+                    <li>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/purple-drop.png" alt="drop">
+                        <h3>Great value for money</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>	
 <?php get_footer(); ?>
