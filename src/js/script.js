@@ -29,13 +29,13 @@ if (hamburgers.length > 0) {
     });
 }
 
-$(document).ready(function() {
-    function menuActive() {
-        $(".hamburger").click(function() {
-            $(".menuMobile").toggleClass("menuMobile--active");
-            $("body").toggleClass("body--locked");
-        });
-    }
+function menuActive() {
+    $(".hamburger").click(function() {
+        $(".menuMobile").toggleClass("menuMobile--active");
+        $("body").toggleClass("body--locked");
+    });
+}
 
+$(document).ready(function() {
     menuActive();
 });
