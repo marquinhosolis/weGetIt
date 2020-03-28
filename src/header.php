@@ -8,6 +8,7 @@
 		<meta name="language" content="PT-BR">
 		<meta content="pt-br" http-equiv="content-language">
 		<link rel="stylesheet" href="https://use.typekit.net/cbw5bcl.css">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/lib/hamburgers.min.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/lib/hover.min.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.min.css">
@@ -15,7 +16,7 @@
 	</head>
 
 	<body>
-<header>
+<header data-aos="fade-down">
 	<div class="container">
 		<div class="headerLogo">
 			<a href="<?php echo site_url(); ?>">

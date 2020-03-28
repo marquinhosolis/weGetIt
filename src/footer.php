@@ -26,6 +26,7 @@
 </footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/37d8e8fa0a.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
 <?php wp_footer(); ?> 
 </body>

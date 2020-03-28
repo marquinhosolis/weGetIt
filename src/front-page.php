@@ -8,21 +8,21 @@ Template Name: Home Page
 	<main class="homePage">
 		<section class="cover coverHome">
 			<div class="container">
-				<div class="coverHomeText">
+				<div class="coverHomeText" data-aos="fade-right">
 					<h1>Premium performance</h1>
 					<h2>without the premium price tag</h2>
 				</div>
-				<div class="coverHomeProducts">
+				<div class="coverHomeProducts" data-aos="zoom-in">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/home-cover-products.png" alt="we get it packshot">
 				</div>
 			</div>
 		</section>
 		<section class="aboutHome">
 			<div class="container">
-				<div class="aboutHomeDrops">
+				<div class="aboutHomeDrops" data-aos="flip-left">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/drops.png" alt="drops">
 				</div>
-				<div class="aboutHomeText">
+				<div class="aboutHomeText" data-aos="fade-left">
 					<h3>Life is for living, <span>not cleaning.</span></h3>
 					<p>Get all of your household jobs done quickly, effectively and affordably with the WeGetIt family of products.</p>
 				</div>
@@ -30,16 +30,16 @@ Template Name: Home Page
 		</section>
 		<section class="productsHome">
 			<div class="container">
-				<div class="productsHomeTitle title">
+				<div class="productsHomeTitle title" data-aos="fade-down">
 					<h3>Explore our products</h3>
 				</div>
 				<div class="productsHomeCategories">
-					<div class="productsHomeCategory" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/category1.png)">
+					<div class="productsHomeCategory" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/category1.png)" data-aos="flip-up">
 						<div class="content">
 							<a href="#" class="btn hvr-shutter-out-horizontal">category name</a>
 						</div>
 					</div>
-					<div class="productsHomeCategory" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/category2.png)">
+					<div class="productsHomeCategory" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/category2.png)" data-aos="flip-up">
 						<div class="content">
 							<a href="#" class="btn hvr-shutter-out-horizontal">category name</a>
 						</div>
@@ -49,25 +49,25 @@ Template Name: Home Page
 		</section>
 		<section class="whyHome">
 			<div class="container">
-				<div class="whyHomeTitle title">
+				<div class="whyHomeTitle title" data-aos="fade-down">
 					<h3>Why WeGetIt</h3>
 				</div>
 				<div class="whyHomeReasons">
-					<div class="whyHomeReason">
+					<div class="whyHomeReason" data-aos="fade-up">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue-drop.png" alt="drop">
 						<div class="whyHomeReasonText">
 							<h4>Big Cleaning, Small Price Tag</h4>
 							<p>Great performance shouldn’t cost the earth! Every WeGetIt product is designed to give you the best results without breaking the bank</p>
 						</div>
 					</div>
-					<div class="whyHomeReason">
+					<div class="whyHomeReason" data-aos="fade-up">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pink-drop.png" alt="drop">
 						<div class="whyHomeReasonText">
 							<h4>Make your Life easier</h4>
 							<p>Spend less time cleaning and more time living! Our multi-tasking products work hard so you don’t have to.</p>
 						</div>
 					</div>
-					<div class="whyHomeReason">
+					<div class="whyHomeReason" data-aos="fade-up">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/purple-drop.png" alt="drop">
 						<div class="whyHomeReasonText">
 							<h4>No Jargon here</h4>
@@ -80,18 +80,18 @@ Template Name: Home Page
 		</section>
 		<section class="whereToBuyHome">
 			<div class="container">
-				<div class="whereToBuyHomeText">
+				<div class="whereToBuyHomeText" data-aos="fade-right">
 					<div class="whereToBuyHomeTitle title">
 						<h3>Looking for where you can buy our products?</h3>
 					</div>
 					<a href="#" class="btn hvr-shutter-out-horizontal">where to buy</a>
 				</div>
-				<img class="whereToBuyHomeImage" src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/where-to-buy-image.png" alt="WeGetIt">
+				<img class="whereToBuyHomeImage" src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/where-to-buy-image.png" alt="WeGetIt" data-aos="fade-left">
 			</div>
 		</section>
 		<section class="blogs blogsHome">
 			<div class="container">
-				<div class="blogsHomeTitle title">
+				<div class="blogsHomeTitle title" data-aos="fade-bottom">
 					<h3>Recent Blogs</h3>
 				</div>
 				<article class="hvr-float">
@@ -137,7 +137,7 @@ Template Name: Home Page
 			</div>
 		</section>
 		<section class="homeCta">
-			<div class="container">
+			<div class="container" data-aos="fade-up">
 				<h3>Have a question, comment or suggestion?</h3>
 				<a href="#" class="btn hvr-shutter-out-horizontal">Contact us now</a>
 			</div>

@@ -38,4 +38,5 @@ function menuActive() {
 
 $(document).ready(function() {
     menuActive();
+    AOS.init();
 });
