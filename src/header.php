@@ -42,7 +42,9 @@
 			</nav>
 		</div>
 	</div>
-	<div class="menuMobile">
+	
+</header>
+<div class="menuMobile">
 		<nav>
 			<ul>
 				<li><a href="<?php echo site_url('/products/')?>" class="hvr-grow">Products</a></li>
@@ -52,4 +54,3 @@
 			</ul>
 		</nav>
 	</div>
-</header>
