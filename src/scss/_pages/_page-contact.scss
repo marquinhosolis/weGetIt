@@ -1,0 +1,63 @@
+.contactPage {
+    background: url(../images/contact-page-bg.png) center center #1d2630;
+    background-size: cover;
+    .contactPageImage {
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (max-width: 768px) {
+            @include ratio(16, 6);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        }
+
+        @media (min-width: 1024px) {
+            width: 50%;
+            clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+        }
+    }
+    .contactPageText {
+        margin: auto;
+        text-align: center;
+        color: #fff;
+        padding: 0 20px;
+        max-width: 500px;
+        h3 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 10px;
+            @media (min-width: 1200px) {
+                font-size: 40px;
+            }
+        }
+        .contactPageForm {
+            padding-bottom: 50px;
+            fieldset {
+                padding: 0;
+                border: 0;
+                input,
+                textarea {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 8px 10px;
+                    border: 0;
+                    font-size: 14px;
+                    font-family: upgrade, sans-serif;
+                }
+                button {
+                    cursor: pointer;
+                    border: 0;
+                    font-family: upgrade, sans-serif;
+                }
+            }
+        }
+        @media (min-width: 1024px) {
+            max-width: 450px;
+            padding: 80px 20px;
+        }
+    }
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-items: stretch;
+    }
+}
