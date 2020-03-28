@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div class="footerNewsletter">
-			waiting for wordpress to implement
+			<?php echo do_shortcode('[formidable id=2]'); ?>
 		</div>
 		<div class="footerDppaLogo">
 			<?php require_once('partials/logo-dppa-footer.php'); ?>

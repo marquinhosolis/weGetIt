@@ -6,14 +6,14 @@ Template Name: Home Page
 
 <?php get_header(); ?>
 	<main class="homePage">
-		<section class="cover coverHome">
+		<section class="cover coverHome" style="background-image: url(<?php the_field('cover_background_image'); ?>)">
 			<div class="container">
 				<div class="coverHomeText" data-aos="fade-right">
-					<h1>Premium performance</h1>
-					<h2>without the premium price tag</h2>
+					<h1><?php the_field('cover_title'); ?></h1>
+					<h2><?php the_field('cover_subtitle'); ?></h2>
 				</div>
 				<div class="coverHomeProducts" data-aos="zoom-in">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/home-cover-products.png" alt="we get it packshot">
+					<img src="<?php the_field('cover_packshot'); ?>" alt="we get it packshot">
 				</div>
 			</div>
 		</section>
@@ -23,8 +23,8 @@ Template Name: Home Page
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/drops.png" alt="drops">
 				</div>
 				<div class="aboutHomeText" data-aos="fade-left">
-					<h3>Life is for living, <span>not cleaning.</span></h3>
-					<p>Get all of your household jobs done quickly, effectively and affordably with the WeGetIt family of products.</p>
+					<h3><?php the_field('about_home_title'); ?><span><?php the_field('about_home_subtitle'); ?></span></h3>
+					<?php the_field('about_home_text'); ?>
 				</div>
 			</div>
 		</section>
@@ -34,14 +34,26 @@ Template Name: Home Page
 					<h3>Explore our products</h3>
 				</div>
 				<div class="productsHomeCategories">
-					<div class="productsHomeCategory" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/category1.png)" data-aos="flip-up">
+					<?php
+						$category1 = get_field('products_home_category_1');
+						$cat1Name = $category1 ->name;
+						$cat1Link = site_url().'/products/#'.$category1 -> slug;
+						$cat1Image = get_field('category_thumbnail', 'category_'.$category1->term_id);
+					?>
+					<div class="productsHomeCategory" style="background-image: url(<?php echo $cat1Image; ?>)" data-aos="flip-up">
 						<div class="content">
-							<a href="#" class="btn hvr-shutter-out-horizontal">category name</a>
+							<a href="<?php echo $cat1Link; ?>" class="btn hvr-shutter-out-horizontal"><?php echo $cat1Name; ?></a>
 						</div>
 					</div>
-					<div class="productsHomeCategory" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/category2.png)" data-aos="flip-up">
+					<?php
+						$category2 = get_field('products_home_category_2');
+						$cat2Name = $category2 ->name;
+						$cat2Link = site_url().'/products/#'.$category2 -> slug;
+						$cat2Image = get_field('category_thumbnail', 'category_'.$category2->term_id);
+					?>
+					<div class="productsHomeCategory" style="background-image: url(<?php echo $cat2Image; ?>)" data-aos="flip-up">
 						<div class="content">
-							<a href="#" class="btn hvr-shutter-out-horizontal">category name</a>
+							<a href="<?php echo $cat2Link; ?>" class="btn hvr-shutter-out-horizontal"><?php echo $cat2Name; ?></a>
 						</div>
 					</div>
 				</div>
@@ -53,29 +65,27 @@ Template Name: Home Page
 					<h3>Why WeGetIt</h3>
 				</div>
 				<div class="whyHomeReasons">
-					<div class="whyHomeReason" data-aos="fade-up">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blue-drop.png" alt="drop">
-						<div class="whyHomeReasonText">
-							<h4>Big Cleaning, Small Price Tag</h4>
-							<p>Great performance shouldn’t cost the earth! Every WeGetIt product is designed to give you the best results without breaking the bank</p>
-						</div>
-					</div>
-					<div class="whyHomeReason" data-aos="fade-up">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pink-drop.png" alt="drop">
-						<div class="whyHomeReasonText">
-							<h4>Make your Life easier</h4>
-							<p>Spend less time cleaning and more time living! Our multi-tasking products work hard so you don’t have to.</p>
-						</div>
-					</div>
-					<div class="whyHomeReason" data-aos="fade-up">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/purple-drop.png" alt="drop">
-						<div class="whyHomeReasonText">
-							<h4>No Jargon here</h4>
-							<p>We’ve ditched the complicated product names and cleaned up the confusing instructions—so you know at a glance what you’re buying and how to use it.</p>
-						</div>
-					</div>
+
+					<?php
+						if( have_rows('why_wegetit') ):
+							while ( have_rows('why_wegetit') ) : the_row(); 
+								$dropColor = get_sub_field('why_wegetit_drop_color');
+								$title = get_sub_field('why_wegetit_title');
+								$copy = get_sub_field('why_wegetit_text');
+							?>
+								<div class="whyHomeReason" data-aos="fade-up">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $dropColor; ?>-drop.png" alt="drop">
+									<div class="whyHomeReasonText">
+										<h4><?php echo $title; ?></h4>
+										<?php echo $copy; ?>
+									</div>
+								</div>
+							<?php
+							endwhile;
+						endif;
+					?>
 				</div>
-				<a href="#" class="btn hvr-shutter-out-horizontal">LEARN MORE ABOUT US</a>
+				<a href="<?php echo site_url('/about-us/')?>" class="btn hvr-shutter-out-horizontal">LEARN MORE ABOUT US</a>
 			</div>
 		</section>
 		<section class="whereToBuyHome">
@@ -84,7 +94,7 @@ Template Name: Home Page
 					<div class="whereToBuyHomeTitle title">
 						<h3>Looking for where you can buy our products?</h3>
 					</div>
-					<a href="#" class="btn hvr-shutter-out-horizontal">where to buy</a>
+					<a href="<?php echo site_url('/where-to-buy/')?>" class="btn hvr-shutter-out-horizontal">where to buy</a>
 				</div>
 				<img class="whereToBuyHomeImage" src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/where-to-buy-image.png" alt="WeGetIt" data-aos="fade-left">
 			</div>
@@ -94,52 +104,43 @@ Template Name: Home Page
 				<div class="blogsHomeTitle title" data-aos="fade-bottom">
 					<h3>Recent Blogs</h3>
 				</div>
-				<article class="hvr-float">
-					<a href="#">
-						<div class="blogImage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/blog-image.png); ">
-							<div class="content"></div>
-						</div>
-						<div class="blogText">
-							<div class="blogDate">Feb. 26, 2019</div>
-							<div class="blogTitle"><h4>Lorem Ipsum</h4></div>
-							<div class="blogIntro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-							<div class="blogReadMore">Read more</div>
-						</div>
-					</a>
-				</article>
-				<article class="hvr-float">
-					<a href="#">
-						<div class="blogImage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/blog-image.png); ">
-							<div class="content"></div>
-						</div>
-						<div class="blogText">
-							<div class="blogDate">Feb. 26, 2019</div>
-							<div class="blogTitle"><h4>Lorem Ipsum</h4></div>
-							<div class="blogIntro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-							<div class="blogReadMore">Read more</div>
-						</div>
-					</a>
-				</article>
-				<article class="hvr-float">
-					<a href="#">
-						<div class="blogImage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/blog-image.png); ">
-							<div class="content"></div>
-						</div>
-						<div class="blogText">
-							<div class="blogDate">Feb. 26, 2019</div>
-							<div class="blogTitle"><h4>Lorem Ipsum</h4></div>
-							<div class="blogIntro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-							<div class="blogReadMore">Read more</div>
-						</div>
-					</a>
-				</article>
-				<a href="#" class="btn hvr-shutter-out-horizontal">View all blogs</a>
+					
+				<?php
+					$args = array(
+						'post_type'              => array( 'post' ),
+						'posts_per_page'         => '3',
+					);
+
+					$query = new WP_Query( $args );
+
+					if ( $query->have_posts() ) {
+						while ( $query->have_posts() ) {
+							$query->the_post(); ?>
+								<article class="hvr-float">
+									<a href="<?php the_permalink(); ?>">
+										<div class="blogImage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/blog-image.png); ">
+											<div class="content"></div>
+										</div>
+										<div class="blogText">
+											<div class="blogDate"><?php the_date(); ?></div>
+											<div class="blogTitle"><h4><?php the_title(); ?></h4></div>
+											<div class="blogIntro"><?php the_excerpt(); ?></div>
+											<div class="blogReadMore">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+										</div>
+									</a>
+								</article>
+						<?php }
+					} 
+					
+					wp_reset_postdata();
+				?>
+				<a href="<?php echo site_url('/blog/')?>" class="btn hvr-shutter-out-horizontal">View all blogs</a>
 			</div>
 		</section>
 		<section class="homeCta">
 			<div class="container" data-aos="fade-up">
 				<h3>Have a question, comment or suggestion?</h3>
-				<a href="#" class="btn hvr-shutter-out-horizontal">Contact us now</a>
+				<a href="<?php echo site_url('/contact-us/')?>" class="btn hvr-shutter-out-horizontal">Contact us now</a>
 			</div>
 		</section>
 	</main>

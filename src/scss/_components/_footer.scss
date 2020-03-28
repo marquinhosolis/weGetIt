@@ -58,6 +58,41 @@ footer {
     }
     .footerNewsletter {
         margin-bottom: 40px;
+        fieldset {
+            position: relative;
+            border: 0;
+            padding: 0;
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-family: upgrade, sans-serif;
+                font-weight: 500;
+            }
+            input {
+                min-width: 300px;
+                padding: 7px 15px;
+                background: none;
+                border: 1px solid #52c4d3;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 14px;
+                font-family: upgrade, sans-serif;
+                &::placeholder {
+                    color: #fff;
+                    opacity: 1;
+                }
+            }
+            button {
+                cursor: pointer;
+                position: absolute;
+                bottom: 6px;
+                right: 2px;
+                background: none;
+                border: 0;
+                color: #1ab6f1;
+                font-size: 18px;
+            }
+        }
         @media (min-width: 768px) {
             margin: 0;
         }

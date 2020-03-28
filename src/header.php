@@ -33,10 +33,10 @@
 		<div class="menuDesktop">
 			<nav>
 				<ul>
-					<li><a href="#" class="hvr-grow">Products</a></li>
-					<li><a href="#" class="hvr-grow">About Us</a></li>
-					<li><a href="#" class="hvr-grow">Contact</a></li>
-					<li><a href="#" class="btn hvr-shutter-out-horizontal">Where to buy</a></li>
+					<li><a href="<?php echo site_url('/products/')?>" class="hvr-grow">Products</a></li>
+					<li><a href="<?php echo site_url('/about-us/')?>" class="hvr-grow">About Us</a></li>
+					<li><a href="<?php echo site_url('/contact-us/')?>" class="hvr-grow">Contact</a></li>
+					<li><a href="<?php echo site_url('/where-to-buy/')?>" class="btn hvr-shutter-out-horizontal">Where to buy</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -44,10 +44,10 @@
 	<div class="menuMobile">
 		<nav>
 			<ul>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#" class="btn hvr-shutter-out-horizontal">Where to buy</a></li>
+				<li><a href="<?php echo site_url('/products/')?>" class="hvr-grow">Products</a></li>
+				<li><a href="<?php echo site_url('/about-us/')?>" class="hvr-grow">About Us</a></li>
+				<li><a href="<?php echo site_url('/contact-us/')?>" class="hvr-grow">Contact</a></li>
+				<li><a href="<?php echo site_url('/where-to-buy/')?>" class="btn hvr-shutter-out-horizontal">Where to buy</a></li>
 			</ul>
 		</nav>
 	</div>
