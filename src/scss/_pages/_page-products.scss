@@ -1,0 +1,149 @@
+.productsPage {
+    .productsPageCover {
+        padding: 50px 0;
+        background-size: cover;
+        background-position: center center;
+        .container {
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+        h1 {
+            margin: 0;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-family: upgrade, sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1;
+            span {
+                font-size: 32px;
+                font-family: upgrade-lights, sans-serif;
+                font-weight: 500;
+                text-transform: uppercase;
+                @media (min-width: 1024px) {
+                    font-size: 55px;
+                }
+            }
+            @media (min-width: 768px) {
+                width: 40%;
+            }
+            @media (min-width: 1024px) {
+                font-size: 70px;
+            }
+        }
+        .productsPageCoverText {
+            color: #ffffff;
+            font-family: upgrade, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            p {
+                margin: 0;
+                margin-bottom: 15px;
+            }
+            @media (min-width: 768px) {
+                width: 50%;
+            }
+            @media (min-width: 1024px) {
+                font-size: 24px;
+            }
+        }
+        @media (min-width: 768px) {
+            padding: 80px 0;
+        }
+    }
+    .productsShowcase {
+        padding: 50px 0;
+        .productCategory {
+            .productCategoryTitle {
+                position: relative;
+                h2 {
+                    position: relative;
+                    margin-bottom: 20px;
+                    display: inline-block;
+                    padding-right: 20px;
+                    background: #fff;
+                    color: #223458;
+                    font-family: upgrade, sans-serif;
+                    font-size: 30px;
+                    font-weight: 700;
+                    @media (min-width: 768px) {
+                        font-size: 36px;
+                    }
+                    @media (min-width: 1024px) {
+                        font-size: 46px;
+                    }
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 20px;
+                    bottom: 0;
+                    margin: auto;
+                    background-color: #ebebeb;
+                    height: 1px;
+                    width: 100%;
+                }
+            }
+            .productsShowcaseSlide {
+                .flex-direction-nav a {
+                    height: 24px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+                .flex-direction-nav .flex-prev {
+                    left: 0;
+                    opacity: 1;
+                    &:before {
+                        font: normal normal normal 14px/1 FontAwesome;
+                        font-size: 24px;
+                        color: #9e9e9e;
+                        content: "\f053";
+                    }
+                }
+                .flex-direction-nav .flex-next {
+                    right: 0;
+                    opacity: 1;
+                    &:before {
+                        font: normal normal normal 14px/1 FontAwesome;
+                        font-size: 24px;
+                        color: #9e9e9e;
+                        content: "\f054";
+                    }
+                }
+                .slides {
+                    li {
+                        .productResume {
+                            text-align: center;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            .productResumeImage {
+                                img {
+                                    width: auto;
+                                    margin: auto;
+                                }
+                            }
+                            .productResumeName {
+                                font-size: 20px;
+                                text-transform: none;
+                                font-family: upgrade, sans-serif;
+                                font-weight: 500;
+                            }
+                        }
+                        @media (min-width: 768px) {
+                            width: calc(25% - 20px);
+                            margin: 20px 10px;
+                        }
+                    }
+                    @media (min-width: 768px) {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}

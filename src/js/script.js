@@ -39,10 +39,17 @@ function menuActive() {
 function slider() {
     if ($(window).width() > 767) {
         $(".dropsSlider").removeClass("flexslider");
+        $(".productsShowcaseSlide").removeClass("flexslider");
     } else {
         $(".aboutUsDrops .flexslider").flexslider({
             animation: "slide",
-            controlNav: false
+            controlNav: false,
+            slideshow: false
+        });
+        $(".productsShowcase .flexslider").flexslider({
+            animation: "slide",
+            controlNav: false,
+            slideshow: false
         });
     }
 }
