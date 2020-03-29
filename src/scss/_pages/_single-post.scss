@@ -1,0 +1,91 @@
+.singlePost {
+    .container {
+        padding: 0;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+    .singleThumb {
+        @include ratio(300, 250);
+        margin-bottom: 30px;
+        @media (min-width: 768px) {
+            width: 40%;
+        }
+        @media (min-width: 1200px) {
+            width: 38%;
+        }
+    }
+    .singlePostText {
+        padding: 25px;
+        .singlePostTextDate {
+            color: #00335a;
+            font-family: upgrade, sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .singlePostTextTitle {
+            color: #00335a;
+            font-family: upgrade, sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        .singlePostTextCopy {
+            color: #00335a;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .postNav {
+            a {
+                text-decoration: none;
+            }
+            .postNavWrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                a {
+                    transition: all liner 0.2s;
+                    color: #bc61c6;
+                    font-family: upgrade, sans-serif;
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    @media (min-width: 1024px) {
+                        margin: 0 20px;
+                    }
+                }
+                @media (min-width: 1024px) {
+                    justify-content: flex-end;
+                }
+            }
+
+            .backBlogLink {
+                a {
+                    color: #bc61c6;
+                    font-family: upgrade, sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-direction: row-reverse;
+            }
+        }
+        @media (min-width: 768px) {
+            padding-top: 0;
+            width: 60%;
+        }
+        @media (min-width: 1200px) {
+            width: 58%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding: 80px 0;
+    }
+}
