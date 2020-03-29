@@ -1,0 +1,66 @@
+.blogPage {
+    padding: 30px 0;
+
+    .blogPageForms {
+        margin-bottom: 40px;
+        .selectWrapper {
+            margin-bottom: 15px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            select {
+                cursor: pointer;
+                appearance: none;
+                border: 0;
+                color: #1d2630;
+                font-family: upgrade, sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            &:after {
+                margin-left: 5px;
+                content: "\f0d7";
+                font: normal normal normal 14px/1 FontAwesome;
+                color: #bc61c6;
+                font-size: 18px;
+            }
+            @media (min-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
+
+        .blogSearchForm {
+            position: relative;
+            min-width: 300px;
+            input {
+                width: 100%;
+                border: 1px solid #a9a9a9;
+                padding: 10px;
+                font-family: upgrade-lights, sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                color: #333333;
+            }
+            button {
+                background: none;
+                border: 0;
+                position: absolute;
+                top: 6px;
+                right: 6px;
+                color: #bc61c6;
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .loadMore {
+        margin-top: 40px;
+        width: 100%;
+    }
+}

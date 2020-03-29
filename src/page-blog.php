@@ -4,7 +4,7 @@ Template Name: Blog Page
 */
 ?>
 <?php
-    $limit = 4;
+    $limit = 6;
     if(isset($_GET['cat'])){
         $cat = $_GET['cat'];
     }
@@ -19,13 +19,12 @@ Template Name: Blog Page
 ?>
 <?php get_header(); ?>
     <main class="blogPage">
-        <section>
+        <div class="blogsHomeTitle title" data-aos="fade-bottom">
+            <h3>Blogs</h3>
+        </div>
+        <section class="blogPageFilters">
             <div class="container">
                 <div class="blogPageForms">
-                    <form action="" method="get">
-                        <input type="search" name="search" placeholder="Search">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
                     <div class="selectWrapper">
                         <form action="" method="get">
                             <?php
@@ -38,14 +37,18 @@ Template Name: Blog Page
                             ?>
                         </form>
                     </div>
+                    <form action="" method="get" class="blogSearchForm">
+                        <input type="search" name="search" placeholder="Search">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="blogs blogPageMain">
             <div class="container">
                 <?php
                     $args = array(
-                        'post_type' => array( 'faqs_cpt' ),
+                        'post_type' => array( 'post' ),
                         'posts_per_page' => $posts,
                         'cat'            => $cat,
                         's'              => $search
@@ -59,19 +62,28 @@ Template Name: Blog Page
                             <?php 
                                 $count = $query->found_posts;
                             ?>
-                            <article>
-                                <?php  the_title(); ?>
-                                <?php the_content(); ?>
-                            </article>
+                            <article class="hvr-float">
+									<a href="<?php the_permalink(); ?>">
+										<div class="blogImage" style="background-image: url(<?php the_post_thumbnail_url( ); ?>">
+											<div class="content"></div>
+										</div>
+										<div class="blogText">
+											<div class="blogDate"><?php the_date(); ?></div>
+											<div class="blogTitle"><h4><?php the_title(); ?></h4></div>
+											<div class="blogIntro"><?php the_excerpt(); ?></div>
+											<div class="blogReadMore">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+										</div>
+									</a>
+								</article>
                         <?php }
                     } 
                     
                     wp_reset_postdata();
                 ?>
                 <?php 
-                    if($query->found_posts > $limit){ ?>
+                    if($query->found_posts > $limit && !isset($_GET['all'])){ ?>
                         <div class="loadMore">
-                            <a href="<?php the_permalink(); ?>?all=1">View more <i class="fa fa-long-arrow-down" aria-hidden="true"></i></a>
+                            <a href="<?php the_permalink(); ?>?all=1" class="btn hvr-shutter-out-horizontal">Load More</a>
                         </div>
                     <?php }
                 ?>
