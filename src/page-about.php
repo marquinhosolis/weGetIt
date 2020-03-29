@@ -5,7 +5,7 @@ Template Name: About Us Page
 ?>
 
 <?php get_header(); ?>
-<main class="contactPage">
+<main class="aboutUsPage">
     <section class="aboutUsCover" style="background-image: url('<?php the_field('cover_background_image'); ?>')">
         <div class="container">
             <h1 data-aos="fade-up">About WeGetIt</h1>
