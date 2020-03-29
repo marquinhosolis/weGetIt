@@ -118,7 +118,7 @@ Template Name: Home Page
 							$query->the_post(); ?>
 								<article class="hvr-float">
 									<a href="<?php the_permalink(); ?>">
-										<div class="blogImage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/blog-image.png); ">
+										<div class="blogImage" style="background-image: url(<?php the_post_thumbnail_url( ); ?>">
 											<div class="content"></div>
 										</div>
 										<div class="blogText">
