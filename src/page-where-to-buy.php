@@ -5,11 +5,11 @@ Template Name: Where to Buy Page
 ?>
 
 <?php get_header(); ?>
-<main class="whereToBuyPage" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/where-to-buy-bg.png); ">
+<main class="whereToBuyPage" style="background-image: url(<?php the_field('page_background_image'); ?>); ">
     <div class="container">
         <div class="whereToBuyPageTitle">
-            <h1><span> Looking for</span><br>WeGetIt products near you?</h1>
-            <p>Enter your location below to find WeGetIt at a store close to you. <br> Please note that not all locations will carry the full range of WeGetIt products.</p>
+            <h1><span><?php the_field('page_subtitle'); ?></span><br><?php the_field('page_title'); ?></h1>
+            <?php the_field('page_copy'); ?>
         </div>
         <section class="storeFilters">
             <div class="storeFilter">
