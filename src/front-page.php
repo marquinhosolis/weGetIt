@@ -96,7 +96,7 @@ Template Name: Home Page
 					</div>
 					<a href="<?php echo site_url('/where-to-buy/')?>" class="btn hvr-shutter-out-horizontal">where to buy</a>
 				</div>
-				<img class="whereToBuyHomeImage" src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/where-to-buy-image.png" alt="WeGetIt" data-aos="fade-left">
+				<img class="whereToBuyHomeImage" src="<?php echo get_stylesheet_directory_uri(); ?>/images/where-to-buy-image.png" alt="WeGetIt" data-aos="fade-left">
 			</div>
 		</section>
 		<section class="blogs blogsHome">
