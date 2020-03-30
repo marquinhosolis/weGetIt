@@ -35,27 +35,21 @@ Template Name: Home Page
 				</div>
 				<div class="productsHomeCategories">
 					<?php
-						$category1 = get_field('products_home_category_1');
-						$cat1Name = $category1 ->name;
-						$cat1Link = site_url().'/products/#'.$category1 -> slug;
-						$cat1Image = get_field('category_thumbnail', 'category_'.$category1->term_id);
+						$arrProducts = get_field('products_list', 10);
+						$arrProducts = $arrProducts[0]['product_category'];
+
+						for($i = 0; $i < 2; $i++){
+							$catName = $arrProducts[$i]['category_name'];
+							$catLink = site_url().'/products/#';
+							$catLink .= slugify($catName);
+							$catImage = $arrProducts[$i]['category_image']; ?>
+							<div class="productsHomeCategory" style="background-image: url(<?php echo $catImage; ?>)" data-aos="flip-up">
+								<div class="content">
+									<a href="<?php echo $catLink; ?>" class="btn hvr-shutter-out-horizontal"><?php echo $catName; ?></a>
+								</div>
+							</div>
+						<?php }
 					?>
-					<div class="productsHomeCategory" style="background-image: url(<?php echo $cat1Image; ?>)" data-aos="flip-up">
-						<div class="content">
-							<a href="<?php echo $cat1Link; ?>" class="btn hvr-shutter-out-horizontal"><?php echo $cat1Name; ?></a>
-						</div>
-					</div>
-					<?php
-						$category2 = get_field('products_home_category_2');
-						$cat2Name = $category2 ->name;
-						$cat2Link = site_url().'/products/#'.$category2 -> slug;
-						$cat2Image = get_field('category_thumbnail', 'category_'.$category2->term_id);
-					?>
-					<div class="productsHomeCategory" style="background-image: url(<?php echo $cat2Image; ?>)" data-aos="flip-up">
-						<div class="content">
-							<a href="<?php echo $cat2Link; ?>" class="btn hvr-shutter-out-horizontal"><?php echo $cat2Name; ?></a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>

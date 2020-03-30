@@ -6,115 +6,54 @@ Template Name: Products Page
 
 <?php get_header(); ?>
 <main class="productsPage">
-    <section class="productsPageCover" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wp/products-page-bg.png);">
+    <section class="productsPageCover" style="background-image: url(<?php the_field('page_background_image'); ?>);">
         <div class="container">
-            <h1>You want a clean home. <br><span>We get it.</span></h1>
+            <h1><?php the_field('page_title'); ?><br><span><?php the_field('page_subtitle'); ?></span></h1>
             <div class="productsPageCoverText">
-                <p>Great cleaning doesn’t need to be complicated or expensive.</p>
-                <p>We’re committed to helping you get all of your household jobs done quickly, effectively and affordably.</p>
+                <?php the_field('page_copy'); ?>
             </div>
         </div>
     </section>
     <section class="productsShowcase">
         <div class="container">
-            <div class="productCategory">
-                <div class="productCategoryTitle">
-                    <h2>Fabric Softeners</h2>
-                </div>
-                <div class="flexslider productsShowcaseSlide">
-                    <ul class="slides">
-                        <li>
-                            <div class="productResume">
-                                <div class="productResumeImage">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/thumbnail_Amaciante-Urca-Brisa-da-Primavera-2l.png" alt="">
-                                </div>
-                                <div class="productResumeCategory">Fabric Softener</div>
-                                <div class="productResumeName">Spring Breeze</div>
-                                <div class="productResumeAmount">68 FL OZ (2.13 US QT) / 2 L</div> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="productResume">
-                                <div class="productResumeImage">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/thumbnail_Amaciante-Urca-Brisa-da-Primavera-2l.png" alt="">
-                                </div>
-                                <div class="productResumeCategory">Fabric Softener</div>
-                                <div class="productResumeName">Spring Breeze</div>
-                                <div class="productResumeAmount">68 FL OZ (2.13 US QT) / 2 L</div> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="productResume">
-                                <div class="productResumeImage">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/thumbnail_Amaciante-Urca-Brisa-da-Primavera-2l.png" alt="">
-                                </div>
-                                <div class="productResumeCategory">Fabric Softener</div>
-                                <div class="productResumeName">Spring Breeze</div>
-                                <div class="productResumeAmount">68 FL OZ (2.13 US QT) / 2 L</div> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="productResume">
-                                <div class="productResumeImage">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/thumbnail_Amaciante-Urca-Brisa-da-Primavera-2l.png" alt="">
-                                </div>
-                                <div class="productResumeCategory">Fabric Softener</div>
-                                <div class="productResumeName">Spring Breeze</div>
-                                <div class="productResumeAmount">68 FL OZ (2.13 US QT) / 2 L</div> 
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="productCategory">
-                <div class="productCategoryTitle">
-                    <h2>Fabric Softeners</h2>
-                </div>
-                <div class="flexslider productsShowcaseSlide">
-                    <ul class="slides">
-                        <li>
-                            <div class="productResume">
-                                <div class="productResumeImage">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/thumbnail_Amaciante-Urca-Brisa-da-Primavera-2l.png" alt="">
-                                </div>
-                                <div class="productResumeCategory">Fabric Softener</div>
-                                <div class="productResumeName">Spring Breeze</div>
-                                <div class="productResumeAmount">68 FL OZ (2.13 US QT) / 2 L</div> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="productResume">
-                                <div class="productResumeImage">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/thumbnail_Amaciante-Urca-Brisa-da-Primavera-2l.png" alt="">
-                                </div>
-                                <div class="productResumeCategory">Fabric Softener</div>
-                                <div class="productResumeName">Spring Breeze</div>
-                                <div class="productResumeAmount">68 FL OZ (2.13 US QT) / 2 L</div> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="productResume">
-                                <div class="productResumeImage">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/thumbnail_Amaciante-Urca-Brisa-da-Primavera-2l.png" alt="">
-                                </div>
-                                <div class="productResumeCategory">Fabric Softener</div>
-                                <div class="productResumeName">Spring Breeze</div>
-                                <div class="productResumeAmount">68 FL OZ (2.13 US QT) / 2 L</div> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="productResume">
-                                <div class="productResumeImage">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wp/thumbnail_Amaciante-Urca-Brisa-da-Primavera-2l.png" alt="">
-                                </div>
-                                <div class="productResumeCategory">Fabric Softener</div>
-                                <div class="productResumeName">Spring Breeze</div>
-                                <div class="productResumeAmount">68 FL OZ (2.13 US QT) / 2 L</div> 
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <?php 
+                $arrProducts = get_field('products_list');
+                $arrProducts = $arrProducts[0]['product_category'];
+                
+                //print_r($arrProducts);
+                foreach ($arrProducts as $category) { 
+                    $catName = $category['category_name'];
+                    $catAnchor = slugify($catName);
+                    ?>
+                    <div class="productCategory" id="<?php echo $catAnchor; ?>">
+                        <div class="productCategoryTitle">
+                            <h2><?php echo $catName; ?></h2>
+                        </div>
+                        <div class="flexslider productsShowcaseSlide">
+                            <ul class="slides">
+                                <?php
+                                    $arrProducts = $category['category_products'];
+                                    foreach($arrProducts as $product){ ?>
+                                        <li>
+                                            <div class="productResume">
+                                                <div class="productResumeImage">
+                                                    <img src="<?php echo $product['product_image']['url']?>" alt="">
+                                                </div>
+                                                <div class="productResumeCategory"><?php echo $product['product_category']?></div>
+                                                <div class="productResumeName"><?php echo $product['product_name']?></div>
+                                                <div class="productResumeAmount"><?php echo $product['product_amount']?></div> 
+                                            </div>
+                                        </li>
+                                    <?php }
+                                ?>
+                            </ul>
+                        </div>
+                    </div>
+                <?php }
+            ?>
+
+            
+            
         </div>
     </section>
     <section class="homeCta">
